@@ -1,0 +1,28 @@
+header h1{
+	text-align: center;
+	font-size: 24px;
+	margin-bottom:30px;
+}
+
+/* ---main start--- */
+#main{
+	width: 700px;
+	height:400px;
+	margin:0 auto;
+	border:#000 1px solid;
+}
+#googlemap{
+	width: 400px;
+	height: 400px;
+	float: left;
+}
+.mapinfo{
+	width: 300px;
+	float: right;
+}
+
+.mapinfo li{
+	list-style-type: none;
+}
+
+/* ---main end--- */

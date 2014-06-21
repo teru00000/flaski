@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>flaski</title>
+	<link rel="stylesheet" href="{{url_for('static/css', filename='style.css')}}">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="{{url_for('static/js', filename='gmaps.js')}}"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+	map = new GMaps({
+	   div: '#googlemap',
+	   zoom: 16,
+	   lat: 35.566963,
+	   lng: 139.521528
+	 });
+	map.addMarker({
+    	lat: 35.566780,
+    	lng: 139.521648,
+    	title: '桐蔭学園高校',
+    	infoWindow: {
+    		content: '桐蔭学園高校'
+    	}
+    });
+ 	map.addMarker({
+    	lat: 35.567565,
+    	lng: 139.522109,
+    	title: '桐蔭学園中学校',
+    	infoWindow: {
+    		content: '桐蔭学園中学校'
+    	}
+    });
+	map.addMarker({
+    	lat: 35.565846,
+    	lng:  139.524201,
+    	title: '桐蔭学園女子部',
+    	infoWindow: {
+    		content: '桐蔭学園女子部'
+    	}
+    });
+ 	map.addMarker({
+    	lat: 35.566474,
+    	lng:  139.519073,
+    	title: '桐蔭横浜大学',
+    	infoWindow: {
+    		content: '桐蔭横浜大学'
+    	}
+    });
+	});
+	</script>
+</head>
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+  </body>
+</html>
